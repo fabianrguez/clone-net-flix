@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
-import "./Row.css";
-import axios from "../../axios";
+import React, { useEffect, useState } from 'react';
+import './Row.css';
+import axios from '../../axios';
 
 const baseUrl = process.env.REACT_APP_BASE_URL_IMAGES;
 
@@ -24,7 +24,9 @@ function Row({ title, fetchUrl, isLargeRow }) {
           <img
             className={`row__poster ${isLargeRow ? 'row__posterLarge' : ''}`}
             key={movie.id}
-            src={`${baseUrl}${isLargeRow ? movie.poster_path : movie.backdrop_path}`}
+            src={`${baseUrl}${
+              isLargeRow ? movie.poster_path : movie.backdrop_path
+            }`}
             alt={movie.name}
           />
         ))}

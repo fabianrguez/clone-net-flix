@@ -1,12 +1,13 @@
-import React from "react";
-import "./App.css";
-import Row from "./components/Row/Row";
-import requests from "./requests";
+import React from 'react';
+import './App.css';
+import Banner from './components/Banner/Banner';
+import Row from './components/Row/Row';
+import requests from './requests';
 
 function App() {
-  console.log(process.env);
   return (
     <div className="app">
+      <Banner />
       <Row
         title="NETFLIX ORIGINAL"
         fetchUrl={requests.fetchNetflixOriginal}
