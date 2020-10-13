@@ -1,3 +1,4 @@
+import { InfoOutlined, PlayArrow } from '@material-ui/icons';
 import React, { useEffect, useState } from 'react';
 import axios from '../../axios';
 import requests from '../../requests';
@@ -20,7 +21,9 @@ function Banner() {
   }
 
   function truncate(string, limit) {
-    return string?.length > limit ? string.substr(0, limit - 1) + '...' : string;
+    return string?.length > limit
+      ? string.substr(0, limit - 1) + '...'
+      : string;
   }
 
   return (
@@ -36,8 +39,12 @@ function Banner() {
           {movie?.title || movie?.name || movie?.original_name}
         </h1>
         <div className="banner__buttons">
-          <button className="banner__button banner__buttonPlay">Play</button>
-          <button className="banner__button">More information</button>
+          <button className="banner__button banner__buttonPlay">
+            <PlayArrow /> Play
+          </button>
+          <button className="banner__button">
+            <InfoOutlined /> More information
+          </button>
         </div>
         <h1 className="banner__description">
           {truncate(movie?.overview, 200)}

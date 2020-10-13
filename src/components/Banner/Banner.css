@@ -46,6 +46,12 @@
   opacity: 1;
   margin-right: 10px;
   transition: all ease 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+.banner__button .MuiSvgIcon-root {
+  margin-right: 10px;
 }
 
 .banner__button:hover {
